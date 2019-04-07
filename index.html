@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bogthe</title>
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet"> 
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container center-content">
+        <h1 class="title">bogthe</h1>
+        <h1 class="menu">projects about-me</h1>
+    </div>
+    <div class="article">
+        <h1 class="article-title">Title</h1>
+        <div class="close-me">X</div>
+        <p>
+            This is some random text that I like to randomly type just to get
+            some space inside of the page
+        </p>
+    </div>
+    <div class="footer center-content">
+        github | linkedin | facebook
+    </div>
+    <script>
+        const s = selector => document.querySelector(selector);
+        let toOpen = true;
+        s('.menu').addEventListener('click', () => {
+            if (toOpen) {
+                s('.footer').classList.add('footer-open');
+                // s('.article').classList.add('article-open');
+                s('.container').classList.add('container-open');
+            } else {
+                s('.footer').classList.remove('footer-open');
+                // s('.article').classList.remove('article-open');
+                s('.container').classList.remove('container-open');
+            }
+
+            toOpen = !toOpen;
+        });
+    </script>
+</body>
+</html>
